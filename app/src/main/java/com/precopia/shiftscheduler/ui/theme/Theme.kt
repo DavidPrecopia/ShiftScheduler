@@ -1,4 +1,4 @@
-package com.example.shiftscheduler.ui.theme
+package com.precopia.shiftscheduler.ui.theme
 
 import android.app.Activity
 import android.os.Build
