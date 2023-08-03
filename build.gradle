@@ -14,4 +14,7 @@ ext {
     versionName = "0.1"
 
     resConfigs = "en"
+
+    timberVersion = "5.0.1"
+    leakCanaryVersion = "2.12"
 }
