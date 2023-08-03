@@ -15,6 +15,17 @@ ext {
 
     resConfigs = "en"
 
+    coreKtxVersion = "1.10.1"
+    kotlinBomVersion = "1.9.0"
+    lifecycleRuntimeVersion = "2.6.1"
+    activityComposeVersion = "1.7.2"
+    composeBomVersion = "2023.06.01"
+
+    junitVersion = "4.13.2"
+    junitAndroidExtVersion = "1.1.5"
+    espressoCoreVersion = "3.5.1"
+
+
     timberVersion = "5.0.1"
     leakCanaryVersion = "2.12"
 }
