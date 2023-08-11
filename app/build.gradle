@@ -8,7 +8,7 @@ android {
     namespace 'com.precopia.shiftscheduler'
     compileSdk rootProject.compileSdkVersion
     defaultConfig {
-        applicationId "com.example.shiftscheduler"
+        applicationId "com.precopia.shiftscheduler"
         minSdk rootProject.minSdkVersion
         targetSdk rootProject.targetSdkVersion
         versionCode rootProject.versionCode
