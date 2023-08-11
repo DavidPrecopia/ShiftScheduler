@@ -1,4 +1,4 @@
-package com.example.shiftscheduler
+package com.precopia.shiftscheduler
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.shiftscheduler.ui.theme.ShiftSchedulerTheme
+import com.precopia.shiftscheduler.ui.theme.ShiftSchedulerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

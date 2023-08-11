@@ -1,4 +1,4 @@
-package com.example.shiftscheduler.ui.theme
+package com.precopia.shiftscheduler.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

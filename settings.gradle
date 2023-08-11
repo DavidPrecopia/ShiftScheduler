@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Shift Scheduler"
-include ':app'
+
+include ':app', ':domain', ':data'
