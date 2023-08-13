@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Restore debug google-services.json
+      run: |
+        echo "${{ secrets.GOOGLE_JSON_DEBUG }}" > app/src/debug/google-services.json
+    - name: Restore release google-services.json
+      run: |
+        echo "${{ secrets.GOOGLE_JSON_RELEASE }}" > app/src/release/google-services.json
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
