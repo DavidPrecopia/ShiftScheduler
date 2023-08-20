@@ -67,8 +67,8 @@ dependencies {
 
     //firebase
     implementation platform("com.google.firebase:firebase-bom:$rootProject.firebaseBomVersion")
-    implementation "com.google.firebase:firebase-crashlytics-ktx"
-    implementation("com.google.firebase:firebase-analytics-ktx")
+    releaseImplementation("com.google.firebase:firebase-crashlytics-ktx")
+    releaseImplementation("com.google.firebase:firebase-analytics-ktx")
 
     //unit testing
     testImplementation "junit:junit:$rootProject.junitVersion"
