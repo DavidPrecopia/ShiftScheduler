@@ -1,13 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
     namespace 'com.precopia.shiftscheduler'
     compileSdk rootProject.compileSdkVersion
     defaultConfig {
-        applicationId "com.example.shiftscheduler"
+        applicationId "com.precopia.shiftscheduler"
         minSdk rootProject.minSdkVersion
         targetSdk rootProject.targetSdkVersion
         versionCode rootProject.versionCode
@@ -62,6 +64,11 @@ dependencies {
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
+
+    //firebase
+    implementation platform("com.google.firebase:firebase-bom:$rootProject.firebaseBomVersion")
+    implementation "com.google.firebase:firebase-crashlytics-ktx"
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
     //unit testing
     testImplementation "junit:junit:$rootProject.junitVersion"
