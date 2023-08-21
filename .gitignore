@@ -9,3 +9,5 @@ App/.DS_Store
 .externalNativeBuild
 .cxx
 local.properties
+/app/shiftscheduler_keystore.jks
+keystore.properties

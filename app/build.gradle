@@ -5,6 +5,10 @@ plugins {
     id 'com.google.firebase.crashlytics'
 }
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
     namespace 'com.precopia.shiftscheduler'
     compileSdk rootProject.compileSdkVersion
@@ -20,10 +24,19 @@ android {
         resConfig rootProject.resConfigs
         setProperty("archivesBaseName", "${applicationId}-v${rootProject.versionName}-(${rootProject.versionCode})")
     }
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
         debug {
             applicationIdSuffix ".debug"
