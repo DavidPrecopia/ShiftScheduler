@@ -3,9 +3,12 @@
 /local.properties
 /.idea/
 .DS_Store
-App/.DS_Store
+/app/.DS_Store
+/app/release/
 /build
 /captures
 .externalNativeBuild
 .cxx
 local.properties
+/app/shiftscheduler_keystore.jks
+keystore.properties
