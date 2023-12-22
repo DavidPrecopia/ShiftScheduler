@@ -1,9 +1,51 @@
 plugins {
-//    id 'java-library'
-    id 'org.jetbrains.kotlin.jvm'
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+android {
+    namespace 'com.precopia.shiftscheduler'
+    compileSdk rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "com.precopia.shiftscheduler"
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // This ensures that ProGuard removes un-supported language resources.
+        // https://developer.android.com/studio/build/shrink-code#unused-alt-resources
+        resConfig rootProject.resConfigs
+        setProperty("archivesBaseName", "${applicationId}-v${rootProject.versionName}-(${rootProject.versionCode})")
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    api project(":domain")
+
+    implementation "io.reactivex.rxjava3:rxjava:$rootProject.rxJavaVersion"
+
+    // Timber
+    debugImplementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
 }

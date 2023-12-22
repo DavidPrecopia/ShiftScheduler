@@ -24,7 +24,9 @@ ext {
     composeBomVersion = "2023.06.01"
 
     firebaseBomVersion = "32.2.2"
+    rxJavaVersion = "3.1.8"
 
+    timberVersion = "5.0.1"
     junitVersion = "4.13.2"
     junitAndroidExtVersion = "1.1.5"
     espressoCoreVersion = "3.5.1"
