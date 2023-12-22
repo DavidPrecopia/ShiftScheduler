@@ -17,7 +17,6 @@
         <activity
             android:name="com.precopia.shiftscheduler.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.ShiftScheduler">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
