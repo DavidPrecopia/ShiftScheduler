@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp'
 }
 
 android {
@@ -44,8 +45,17 @@ android {
 dependencies {
     api project(":domain")
 
+    //rxjava 3
     implementation "io.reactivex.rxjava3:rxjava:$rootProject.rxJavaVersion"
 
-    // Timber
+    //room
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+    ksp "androidx.room:room-compiler:$rootProject.roomVersion"
+    implementation "androidx.room:room-rxjava3:$rootProject.roomVersion"
+
+    //room testing
+    debugImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    //timber
     debugImplementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
 }

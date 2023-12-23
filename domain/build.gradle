@@ -8,5 +8,6 @@ java {
 }
 
 dependencies {
+    //rxjava 3
     implementation "io.reactivex.rxjava3:rxjava:$rootProject.rxJavaVersion"
 }
