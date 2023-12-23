@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace 'com.precopia.shiftscheduler'
+    namespace 'com.precopia.data'
     compileSdk rootProject.compileSdkVersion
     defaultConfig {
-        applicationId "com.precopia.shiftscheduler"
+        applicationId "com.precopia.data"
         minSdk rootProject.minSdkVersion
         targetSdk rootProject.targetSdkVersion
         versionCode rootProject.versionCode
