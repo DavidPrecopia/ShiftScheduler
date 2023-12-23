@@ -18,6 +18,15 @@ android {
         // https://developer.android.com/studio/build/shrink-code#unused-alt-resources
         resConfig rootProject.resConfigs
         setProperty("archivesBaseName", "${applicationId}-v${rootProject.versionName}-(${rootProject.versionCode})")
+        //compile options for room
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true"
+                ]
+            }
+        }
     }
     buildTypes {
         release {
