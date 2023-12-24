@@ -64,7 +64,9 @@ dependencies {
     implementation "androidx.room:room-rxjava3:$rootProject.roomVersion"
 
     //room testing
-    debugImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoCoreVersion"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$rootProject.junitAndroidExtVersion"
     //timber
     debugImplementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
 }
