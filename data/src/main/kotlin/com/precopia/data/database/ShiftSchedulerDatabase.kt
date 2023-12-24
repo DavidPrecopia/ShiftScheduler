@@ -37,9 +37,10 @@ internal abstract class ShiftSchedulerDatabase: RoomDatabase() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
                         Executors.newSingleThreadExecutor().execute {
-                            getInstance(application)
-                                .weekDao()
-                                .addWeeks(PREPOPULATE_DATA)
+                            getInstance(application).apply {
+                                weekDao().addWeeks(PREPOPULATE_DATA_WEEKS)
+                                selectedWeekDao().addInitialSelectedWeek(PREPOPULATE_DATA_SELECTED_WEEK)
+                            }
                         }
                     }
                 }).build()
@@ -47,9 +48,14 @@ internal abstract class ShiftSchedulerDatabase: RoomDatabase() {
             return database!!
         }
         
-        val PREPOPULATE_DATA = listOf(
+        val PREPOPULATE_DATA_WEEKS = listOf(
             WeekDb(1, "A Week", "072523"),
             WeekDb(2, "B Week", "080123")
+        )
+        
+        val PREPOPULATE_DATA_SELECTED_WEEK = SelectedWeekDb(
+            DatabaseConstants.SELECTED_WEEK_ID_COLUMN_VALUE,
+            0
         )
     }
     

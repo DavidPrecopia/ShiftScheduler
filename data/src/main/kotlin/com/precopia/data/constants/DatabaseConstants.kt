@@ -11,5 +11,5 @@ object DatabaseConstants {
     const val SELECTED_WEEK_TABLE_NAME = "selected_week"
     const val SELECTED_WEEK_ID_COLUMN = "id"
     const val SELECTED_WEEK_WEEK_ID_COLUMN = "week_id"
-    const val SELECTED_WEEK_ID_COLUMN_VALUE = "111111"
+    const val SELECTED_WEEK_ID_COLUMN_VALUE = 111111
 }
