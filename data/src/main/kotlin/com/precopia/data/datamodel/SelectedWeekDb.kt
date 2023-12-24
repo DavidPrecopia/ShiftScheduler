@@ -9,7 +9,7 @@ import com.precopia.data.constants.DatabaseConstants.SELECTED_WEEK_TABLE_NAME
 import com.precopia.data.constants.DatabaseConstants.SELECTED_WEEK_WEEK_ID_COLUMN
 
 @Entity(tableName = SELECTED_WEEK_TABLE_NAME)
-data class SelectedWeekDb(
+internal data class SelectedWeekDb(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = SELECTED_WEEK_ID_COLUMN,
         defaultValue = SELECTED_WEEK_ID_COLUMN_VALUE.toString()

@@ -1,6 +1,6 @@
 package com.precopia.data.constants
 
-object DatabaseConstants {
+internal object DatabaseConstants {
     const val DATABASE_NAME = "shift_scheduler"
     
     const val WEEK_TABLE_NAME = "week"
