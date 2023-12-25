@@ -7,6 +7,8 @@ import io.reactivex.rxjava3.core.Single
 interface IRepositoryContract {
     interface Weeks {
         fun getWeeks(): Single<List<Week>>
+        
+        fun getSpecificWeek(id: Int): Single<Week>
     }
     
     interface SelectedWeek {
