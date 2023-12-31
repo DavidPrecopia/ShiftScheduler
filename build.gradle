@@ -2,15 +2,16 @@ plugins {
     id 'com.android.application' version '8.2.0' apply false
     id 'com.android.library' version '8.2.0' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    id 'com.google.devtools.ksp' version '1.9.21-1.0.16' apply false
     id 'com.google.gms.google-services' version '4.3.15' apply false
     id 'com.google.firebase.crashlytics' version '2.9.8' apply false
 //    id 'org.jetbrains.kotlin.jvm' version '1.8.20' apply false
 }
 
 ext {
-    compileSdkVersion = 33
+    compileSdkVersion = 34
     minSdkVersion = 28
-    targetSdkVersion = 33
+    targetSdkVersion = 34
 
     versionCode = 1
     versionName = "0.1"
@@ -24,7 +25,10 @@ ext {
     composeBomVersion = "2023.06.01"
 
     firebaseBomVersion = "32.2.2"
+    roomVersion = "2.6.1"
+    rxJavaVersion = "3.1.8"
 
+    timberVersion = "5.0.1"
     junitVersion = "4.13.2"
     junitAndroidExtVersion = "1.1.5"
     espressoCoreVersion = "3.5.1"
